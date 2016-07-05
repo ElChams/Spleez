@@ -2,19 +2,58 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.slpeez.spleez">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+
     <application
+        android:icon="@drawable/logo"
+        android:label="SpleeZ"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:largeHeap="true"
+        >
+        <service
+            android:name=".FetchAddressIntentService"
+            android:exported="false"/>
         <activity android:name=".MainActivity">
-            <intent-filter>
+            /*<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CreerParticiper_Activity"></activity>
+        <activity android:name=".ListActActivity"></activity>
+        <activity android:name=".Participer_Activity"></activity>
+        <activity android:name=".Creer_Activity_"></activity>
+        <activity android:name=".Profil_Activity"></activity>
+        <activity android:name=".Creation_activity.Creation_Activity"></activity>
+        <activity android:name=".Participation_Activity"></activity>
+        <activity android:name=".Inscription_Activity"></activity>
+
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

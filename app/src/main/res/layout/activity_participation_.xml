@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context="com.slpeez.spleez.CreerParticiper_Activity">
+
+    <ListView
+        android:id="@+id/list_activities"
+        android:layout_marginBottom="15dp"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10.0dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:background="@drawable/prairie"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/barmenu"
+        android:id="@+id/linearLayout5"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imageButton15"
+            android:background="@drawable/logo"
+            android:layout_marginLeft="30dp" />
+
+        <ImageButton
+            android:layout_width="29dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton16"
+            android:background="@drawable/logoamis"
+            android:contentDescription=""
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/imageView8"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="60dp" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imageButton17"
+            android:background="@drawable/logoevenement"
+            android:layout_marginLeft="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/noteuser"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="7dp"
+        android:id="@+id/imageView14"
+        android:background="@drawable/barselectmenu"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/linearLayout5"
+        android:layout_alignParentLeft="true" />
+
+    <ImageButton
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/imageButton14"
+        android:background="@drawable/ptofilicone"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imageButton14"
+        android:layout_toStartOf="@+id/imageView14"
+        android:layout_alignParentEnd="true"></GridLayout>
+
+</RelativeLayout>

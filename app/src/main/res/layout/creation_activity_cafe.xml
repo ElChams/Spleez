@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context="com.slpeez.spleez.CreerParticiper_Activity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:background="@drawable/turret"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/annuler"
+        android:background="@drawable/annuler"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/valider"
+        android:background="@drawable/valider"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/barmenu"
+        android:id="@+id/linearLayout2"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/spleez"
+            android:background="@drawable/logo"
+            android:layout_marginLeft="30dp" />
+
+        <ImageButton
+            android:layout_width="29dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/logoamis"
+            android:background="@drawable/logoamis"
+            android:contentDescription=""
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/imageView8"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="60dp" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/logoevent"
+            android:background="@drawable/logoevenement"
+            android:layout_marginLeft="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/noteuser"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="7dp"
+        android:id="@+id/imageView9"
+        android:background="@drawable/barselectmenu"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/linearLayout2" />
+
+    <ImageButton
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/buttonprofil"
+        android:background="@drawable/ptofilicone"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/editText25"
+        android:background="#a6000000"
+        android:layout_below="@+id/buttonprofil"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/editText26"
+        android:layout_below="@+id/editText25"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Quand ?"
+        android:textColor="#FFFFFFFF"
+        android:id="@+id/textView48"
+        android:layout_below="@+id/editText26"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Ou ?"
+        android:textColor="#FFFFFFFF"
+        android:id="@+id/textView49"
+        android:layout_below="@+id/textView48"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/editText27"
+        android:layout_below="@+id/textView49"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:textColor="#FFFFFFFF"
+        android:id="@+id/editText28"
+        android:layout_below="@+id/editText27"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText29"
+        android:layout_below="@+id/editText28"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Nom de l&apos;activité"
+        android:textColor="#FFFFFFFF"
+        android:id="@+id/textView50"
+        android:layout_below="@+id/editText29"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Combien ?"
+        android:textColor="#FFFFFFFF"
+        android:id="@+id/textView51"
+        android:layout_below="@+id/textView50"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="VOYAGE"
+        android:textColor="#FFFFFFFF"
+        android:id="@+id/textView52"
+        android:layout_below="@+id/textView51"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Commentaire"
+        android:textColor="#FFFFFFFF"
+        android:id="@+id/textView53"
+        android:layout_below="@+id/textView52"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/editText30"
+        android:layout_below="@+id/textView53"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Durée"
+        android:textColor="#FFFFFFFF"
+        android:id="@+id/textView54"
+        android:layout_below="@+id/editText30"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/editText31"
+        android:layout_below="@+id/textView54"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
