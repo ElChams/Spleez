@@ -1,10 +1,16 @@
 package com.slpeez.spleez;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+
+import com.slpeez.spleez.Menu.NavigationDrawer;
 
 public class Participer_Activity extends AppCompatActivity {
 
@@ -12,6 +18,13 @@ public class Participer_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_participer_);
+
+        /* Initialisation menu */
+        final DrawerLayout drawer_layout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        final ImageButton spleez = (ImageButton) findViewById(R.id.spleez);
+        final ImageView photo = (ImageView) findViewById(R.id.icon_image);
+        final Bitmap obm = BitmapFactory.decodeResource(getResources(), R.drawable.profile_image);
+        NavigationDrawer nd = new NavigationDrawer(this, drawer_layout, spleez, obm, photo).navigationDrawerInitialize();
 
         ImageButton Sport= (ImageButton)findViewById(R.id.Sport);
         ImageButton Cafe= (ImageButton)findViewById(R.id.Cafe);

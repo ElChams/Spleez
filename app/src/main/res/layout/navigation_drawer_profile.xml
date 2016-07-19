@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/background_layout">
+
+
+    <TextView
+        android:id="@+id/note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Note"
+        android:textColor="#fff"
+        android:layout_marginTop="140dp"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true" />
+
+
+    <ImageView
+        android:id="@+id/icon_image"
+        android:layout_width="@dimen/icon"
+        android:layout_height="@dimen/icon"
+        android:layout_centerInParent="true">
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/icon_mask"
+        android:layout_width="@dimen/icon_mask"
+        android:layout_height="@dimen/icon_mask"
+        android:background="@drawable/rounded_profile_photo"
+        android:scaleType="fitXY"
+        android:layout_centerInParent="true">
+    </ImageView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Prenom"
+            android:id="@+id/prenom_text"
+            android:layout_marginRight="10dp"
+            android:textColor="#fff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Nom"
+            android:id="@+id/nom_text"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+
+</RelativeLayout>

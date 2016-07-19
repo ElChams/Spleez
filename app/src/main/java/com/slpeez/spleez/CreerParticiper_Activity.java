@@ -1,9 +1,12 @@
 package com.slpeez.spleez;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +16,7 @@ import android.widget.ImageView;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.slpeez.spleez.Menu.NavigationDrawer;
 
 public class CreerParticiper_Activity extends AppCompatActivity {
 
@@ -39,6 +43,13 @@ public class CreerParticiper_Activity extends AppCompatActivity {
         ImageButton BoutonParticper = (ImageButton)findViewById(R.id.button4);
         ImageButton BoutonProfil = (ImageButton)findViewById(R.id.buttonprofil);
         ImageButton BoutonSpleez = (ImageButton)findViewById(R.id.spleez);
+
+        /* Initialisation menu */
+        final DrawerLayout drawer_layout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        final ImageButton spleez = (ImageButton) findViewById(R.id.spleez);
+        final ImageView photo = (ImageView) findViewById(R.id.icon_image);
+        final Bitmap obm = BitmapFactory.decodeResource(getResources(), R.drawable.profile_image);
+        NavigationDrawer nd = new NavigationDrawer(this, drawer_layout, spleez, obm, photo).navigationDrawerInitialize();
 
 
 
