@@ -1,4 +1,4 @@
-package com.slpeez.spleez;
+package com.slpeez.spleez.Activity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -17,8 +17,9 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.slpeez.spleez.Menu.NavigationDrawer;
+import com.slpeez.spleez.Activity.R;
 
-public class CreerParticiper_Activity extends AppCompatActivity {
+public class ChoiceActivity extends AppCompatActivity {
 
 
     private GoogleApiClient client;

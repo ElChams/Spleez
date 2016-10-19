@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.slpeez.spleez.R;
+import com.slpeez.spleez.Activity.R;
 import com.slpeez.spleez.Object.Event;
 
 

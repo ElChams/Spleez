@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.slpeez.spleez">
+    package="com.slpeez.spleez.Activity">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -18,24 +18,22 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:largeHeap="true"
         >
-        <service
-            android:name=".FetchAddressIntentService"
-            android:exported="false"/>
-        <activity android:name=".MainActivity">
-            /*<intent-filter>
+        <activity android:name=".LoginActivity">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CreerParticiper_Activity"></activity>
+        <!--<activity android:name=".CreerParticiper_Activity"></activity>-->
         <activity android:name=".ListActActivity"></activity>
+        <activity android:name=".ChoiceActivity"></activity>
         <activity android:name=".Participer_Activity"></activity>
         <activity android:name=".Creer_Activity_"></activity>
         <activity android:name=".Profil_Activity"></activity>
-        <activity android:name=".Creation_activity.Creation_Activity"></activity>
+
+        <activity android:name=".Creation_Activity"></activity>
         <activity android:name=".Participation_Activity"></activity>
-        <activity android:name=".Inscription_Activity"></activity>
+        <activity android:name=".SigninActivity"></activity>
 
 
         <!--

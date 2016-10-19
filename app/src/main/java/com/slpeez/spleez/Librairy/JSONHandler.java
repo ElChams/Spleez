@@ -25,9 +25,9 @@ public class JSONHandler {
     URLHandler _urlHandler;
 
     /* Just modify the URL to fit the correct address of the server */
-    private static String _loginURL = "http://192.168.1.25:8000/user";
-    private static String _getActivities = "http://192.168.1.25:8000/activities";
-    private static String _createNewActivity = "http://192.168.1.37:8000/create_new_activity.py";
+    private static String _loginURL = "http://192.168.0.27:8000/user";
+    private static String _getActivities = "http://192.168.0.27:8000/activities";
+    private static String _createNewActivity = "http://192.168.0.27:8000/activity/";
 
     public JSONHandler(Context c) {
 
@@ -38,10 +38,8 @@ public class JSONHandler {
 
     public JSONObject isUserValid(String login, String password) throws IOException {
 
-        JSONObject user = new JSONObject();
-
         try {
-            String response = _urlHandler.makeRequest(_loginURL+"/"+login+"/"+password);
+            String response = _urlHandler.makeRequest(_loginURL + "/" + login + "/" + password);
             return new JSONObject(response);
 
         } catch(JSONException je) {
@@ -51,7 +49,6 @@ public class JSONHandler {
     }
 
     public ArrayList<Event> getListEvent() throws IOException {
-
         ArrayList<Event> result = new ArrayList<>();
         try {
             String response = _urlHandler.makeRequest(_getActivities);
@@ -66,12 +63,27 @@ public class JSONHandler {
                 e.setName(name);
                 result.add(e);
             }
+
         } catch(JSONException je) {
 
         }
         return result;
     }
 
+    public boolean createNewActivity() {
 
+        JSONObject activity = new JSONObject();
+
+        try {
+            activity.put("name","test").put("description","test").put("date","10/10/2010").put("address_id","1").put("creator_id","1");
+            String response = _urlHandler.makeRequestWithParams(_createNewActivity, activity.toString());
+            return true;
+        } catch(JSONException je) {
+
+        } catch (IOException ioe) {
+
+        }
+        return false;
+    }
 
 }

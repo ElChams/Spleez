@@ -1,21 +1,32 @@
-package com.slpeez.spleez.Creation_activity;
+package com.slpeez.spleez.Activity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
-import com.slpeez.spleez.CreerParticiper_Activity;
-import com.slpeez.spleez.Creer_Activity_;
+import com.slpeez.spleez.Activity.ChoiceActivity;
+import com.slpeez.spleez.Activity.Creer_Activity_;
+import com.slpeez.spleez.Librairy.JSONHandler;
 import com.slpeez.spleez.Menu.NavigationDrawer;
-import com.slpeez.spleez.R;
+import com.slpeez.spleez.Activity.R;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class Creation_Activity extends AppCompatActivity {
+
+    protected JSONHandler _jh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,14 +43,14 @@ public class Creation_Activity extends AppCompatActivity {
         ImageButton Valider = (ImageButton)findViewById(R.id.valider);
         ImageButton Annuler = (ImageButton)findViewById(R.id.annuler);
 
-
+        _jh  = new JSONHandler(getApplicationContext());
 
         Valider.setOnClickListener(new View.OnClickListener() {
             //b.setOnClickListener(View.OnClickListener t)  = new View.OnClickListener() {
             public void onClick(View v) {
 
-                Intent openCreerParticiper = new Intent(getApplicationContext(), CreerParticiper_Activity.class);
-                startActivity(openCreerParticiper);
+                DoCreateActivity createActivityProcess = new DoCreateActivity();
+                createActivityProcess.execute(new ArrayList<String>());
             }
         });
 
@@ -51,5 +62,25 @@ public class Creation_Activity extends AppCompatActivity {
                 startActivity(openCreer);
             }
         });
+    }
+
+    private class DoCreateActivity extends AsyncTask<ArrayList<String>, Integer, Void> {
+
+        JSONObject userIsValid = null;
+
+        protected Void doInBackground(ArrayList<String>... key) {
+
+
+            _jh.createNewActivity();
+            return null;
+        }
+
+        protected void onPostExecute(Void result) {
+
+            Intent i = new Intent(Creation_Activity.this, ChoiceActivity.class);
+            startActivity(i);
+
+
+        }
     }
 }

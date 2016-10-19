@@ -1,4 +1,4 @@
-package com.slpeez.spleez;
+package com.slpeez.spleez.Activity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -39,7 +39,7 @@ public class Participer_Activity extends AppCompatActivity {
 
         Event.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent openCreerParticiper = new Intent(getApplicationContext(), CreerParticiper_Activity.class);
+                Intent openCreerParticiper = new Intent(getApplicationContext(), ChoiceActivity.class);
                 startActivity(openCreerParticiper);
             }
         });

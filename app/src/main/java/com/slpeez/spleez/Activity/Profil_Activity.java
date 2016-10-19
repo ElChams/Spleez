@@ -1,4 +1,4 @@
-package com.slpeez.spleez;
+package com.slpeez.spleez.Activity;
 
 import android.app.Activity;
 import android.graphics.Bitmap;

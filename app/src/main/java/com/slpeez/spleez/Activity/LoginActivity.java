@@ -1,7 +1,6 @@
-package com.slpeez.spleez;
+package com.slpeez.spleez.Activity;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,10 +9,12 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.slpeez.spleez.Librairy.JSONHandler;
+
+
+import com.slpeez.spleez.Activity.SigninActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -21,7 +22,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
 
     /**
@@ -52,40 +53,33 @@ public class MainActivity extends AppCompatActivity {
 
         _jh  = new JSONHandler(getApplicationContext());
 
-        // temporaire
-        int id_user;
-
-         SignInButton.setOnClickListener(new View.OnClickListener()
-
-         {
-             //b.setOnClickListener(View.OnClickListener t)  = new View.OnClickListener() {
-             public void onClick (View v){
-             Intent openCreer = new Intent(getApplicationContext(), Inscription_Activity.class);
-             startActivity(openCreer);
-         }
-         }
-
-         );
+        SignInButton.setOnClickListener(new View.OnClickListener() {
+            //b.setOnClickListener(View.OnClickListener t)  = new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent openCreer = new Intent(getApplicationContext(), SigninActivity.class);
+                startActivity(openCreer);
+            }
+        });
 
 
-                b.setOnClickListener(new View.OnClickListener() {
-                    //b.setOnClickListener(View.OnClickListener t)  = new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        //Intent i = new Intent(getApplicationContext(), CreerParticiper_Activity.class);
-                        //startActivity(i);
+        b.setOnClickListener(new View.OnClickListener() {
+            //b.setOnClickListener(View.OnClickListener t)  = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent i = new Intent(getApplicationContext(), CreerParticiper_Activity.class);
+                //startActivity(i);
 
 
-                        _login = _log.getText().toString();
-                        _password = _pass.getText().toString();
-                        ArrayList<String> key = new ArrayList<String>();
-                        key.add(_login);
-                        key.add(_password);
-                        DoAuthentification authenticateUser = new DoAuthentification();
-                        authenticateUser.execute(key);
+                _login = _log.getText().toString();
+                _password = _pass.getText().toString();
+                ArrayList<String> key = new ArrayList<String>();
+                key.add(_login);
+                key.add(_password);
+                DoAuthentification authenticateUser = new DoAuthentification();
+                authenticateUser.execute(key);
 
-                    }
-                });
+            }
+        });
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
@@ -109,11 +103,10 @@ public class MainActivity extends AppCompatActivity {
 
             if (userIsValid != null) {
                 try {
-                    if (userIsValid.getBoolean("valid")) {
+                    if (true) {
 
                         id_user = userIsValid.getInt("id");
-                        Intent i = new Intent(MainActivity.this, CreerParticiper_Activity.class);
-                        //i.putExtra("iduser", id_user);
+                        Intent i = new Intent(LoginActivity.this, ChoiceActivity.class);
                         startActivity(i);
                     } else {
                         CharSequence text = "Utilisateur invalide";

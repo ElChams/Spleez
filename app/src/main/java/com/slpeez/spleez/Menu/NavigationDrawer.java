@@ -16,7 +16,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-import com.slpeez.spleez.R;
+import com.slpeez.spleez.Activity.R;
 
 /**
  * Created by LeClem on 11/07/2016.

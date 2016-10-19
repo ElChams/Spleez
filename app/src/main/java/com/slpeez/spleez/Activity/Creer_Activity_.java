@@ -1,4 +1,4 @@
-package com.slpeez.spleez;
+package com.slpeez.spleez.Activity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -10,17 +10,8 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import com.slpeez.spleez.Creation_activity.Creation_Activity;
-import com.slpeez.spleez.Creation_activity.Creation_Activity_Apero;
-import com.slpeez.spleez.Creation_activity.Creation_Activity_Atable;
-import com.slpeez.spleez.Creation_activity.Creation_Activity_Cafe;
-import com.slpeez.spleez.Creation_activity.Creation_Activity_Cinema;
-import com.slpeez.spleez.Creation_activity.Creation_Activity_Culture;
-import com.slpeez.spleez.Creation_activity.Creation_Activity_JeuxVideo;
-import com.slpeez.spleez.Creation_activity.Creation_Activity_Jobs;
-import com.slpeez.spleez.Creation_activity.Creation_Activity_Sport;
-import com.slpeez.spleez.Creation_activity.Creation_Activity_Voyage;
 import com.slpeez.spleez.Menu.NavigationDrawer;
+
 
 public class Creer_Activity_ extends AppCompatActivity {
 
@@ -112,7 +103,7 @@ public class Creer_Activity_ extends AppCompatActivity {
             //b.setOnClickListener(View.OnClickListener t)  = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent openAmis = new Intent(getApplicationContext(), CreerParticiper_Activity.class);
+                Intent openAmis = new Intent(getApplicationContext(), ChoiceActivity.class);
                 startActivity(openAmis);
             }
         });

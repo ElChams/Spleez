@@ -1,12 +1,13 @@
-package com.slpeez.spleez;
+package com.slpeez.spleez.Activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+
 /**
  * Created by alexduffaut on 16/05/16.
  */
-public class Inscription_Activity extends AppCompatActivity {
+public class SigninActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
